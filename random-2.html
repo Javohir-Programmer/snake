@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abed</title>
+    <style>
+      body{
+        background: #dded;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      
+
+      .container{
+        width: 300px;
+        height: 350px;
+        background: linear-gradient(45deg, blue, red);
+        border-radius: 10px;
+        border: 5px solid black;
+      }
+      .container i{
+        color: white;
+        font-size: 20px;
+      }
+
+      h1{
+        color: white;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Omadli Kun 😂</h1>
+    
+    <i>Abed oberadi:</i>
+    <b id="chiq"></b>
+    <br><br>
+    <span title="Bosishdan oldin yaxshilab oyla. Balki ozing tushib qolishing mumkin !">
+      <button onclick='bosilsin()'>Aniqlash</button>
+    </span>
+    <button onclick="tozalansin()">Tozalash</button>
+
+    <br><br>
+    
+
+    <i>Qachon:</i>
+    <b id="kun"></b>
+    <br><br>
+    <button onclick="bos()">Aniqlash</button>
+    <button onclick="tozala()">Tozalash</button>
+
+    <br><br>
+
+    <i>Nima:</i>
+    <b id="ovqat"></b>
+    <br><br>
+    <button onclick="one()">Aniqlash</button>
+    <button onclick="two()">Tozalash</button>
+    <br><br>
+    
+  </div>
+
+  <script>
+    var ishtirokchilar = ['javohir' , 'Shahzod' , 'Doniyor' , 'Sardor'];
+    function bosilsin(){
+        document.getElementById('chiq').innerHTML = ishtirokchilar[Math.floor(Math.random()*5)];
+        document.getElementById('chiq').style.color = 'white';
+        document.getElementById('chiq').style.fontFamily = "cursive";
+
+    }
+    function tozalansin(){
+        document.getElementById('chiq').innerHTML = '';
+    }
+
+    // 2
+
+    var kunlar = ['Dushanba', 'Seshanba', 'Chorshanba', 'Payshanba', 'Juma', 'Shanba', 'Bugun', 'Darsdan kn'];
+    function bos(){
+      document.getElementById('kun').innerHTML = kunlar[Math.floor(Math.random()*8)];
+      document.getElementById('kun').style.fontFamily = "cursive";
+      document.getElementById('kun').style.color = 'white';
+    }
+    function tozala(){
+      document.getElementById('kun').innerHTML = ' ';
+    }
+
+    // 3
+
+    var taomlar = ['Somsa', 'Osh', 'Kalbsa bn Non', 'Hod Dog', 'Pizza'];
+
+    function one(){
+      document.getElementById('ovqat').innerHTML = taomlar[Math.floor(Math.random()*5)];
+      document.getElementById('ovqat').style.color = 'white';
+      document.getElementById('ovqat').style.fontFamily = 'cursive';
+    }
+
+    function two(){
+      document.getElementById('ovqat').innerHTML = ' ';
+    }
+
+
+    function all(){
+      document.getElementById('ovqat').innerHTML = ' ';
+      document.getElementById('kun').innerHTML = ' ';
+      document.getElementById('chiq').innerHTML = ' ';
+    }
+  </script>
+</body>
+</html>
